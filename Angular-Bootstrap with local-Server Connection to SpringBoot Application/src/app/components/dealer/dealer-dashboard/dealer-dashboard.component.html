@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <p class="navbar-brand" routerLink="/home">Home</p>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <p class="nav-link active" ><button class="btn-nav">Raise a ticket</button></p>
+            
+          </li>
+          <li class="nav-item">
+            <p class="nav-link" ><button class="btn-nav">Contact Customer</button></p>
+          </li>
+          <li class="nav-item">
+            <p class="nav-link" ><button class="btn-nav">Contact admin</button></p>
+          </li>
+         
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container">
+        <div class="user-info">
+            <span>Dealer Name:{{dealer1.companyName}}</span><br>
+            <span >Dealer ID:{{dealer1.dealerId}} </span>
+        </div>
+        <h2>Your Orders</h2>
+        <div class="order-table">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Product Id</th>
+                      <th>Product Name</th>
+                      <th>Product Qty</th>
+                      <th>Customer Address</th>
+                      <th>Customer Mobile</th>
+                      <th>Product Price</th>
+                      
+                      
+                      <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Pending Orders -->
+                    <tr *ngFor="let order of orderList">
+                      <td>{{order.orderId}}</td>
+                      <td>{{order.productId}}</td>
+                      <td>{{order.productName}}</td>
+                      <td>{{order.productQty}}</td>
+                      <td>{{order.customerAddress}}</td>
+                      <td>{{order.customerMobile}}</td>
+                      
+                      <td>{{order.productPrice}}</td>
+                      
+                      
+                      
+                      <td *ngIf="order.orderStatus!==orderAccepted">
+                        <tr>
+                        <button class="btn btn-primary" (click)="acceptOrder(order.orderId)">Accept</button>
+                        <button class="btn btn-warning" (click)="rejectOrder(order.orderId)">Reject</button>
+                        </tr>
+                      </td>
+                      <td *ngIf="order.orderStatus===orderAccepted">
+                        Order Accepted
+                      </td>
+                      
+                  </tr>
+                  
+
+                </tbody>
+            </table>
+        </div>
+    </div>

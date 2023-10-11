@@ -1,0 +1,31 @@
+<div class="container">
+    <h2 class="text-center">Place an Order</h2>
+    
+        <div class="form-group">
+            <label for="productId">Product ID:</label>
+            <input type="text" class="form-control" id="fullName" placeholder="Enter Product Id" [(ngModel)]="customerOrder1.productId">
+        </div>
+        <div class="form-group">
+            <label for="productName">Product Name:</label>
+            <input type="text" class="form-control" id="email" placeholder="Enter Product Name" [(ngModel)]="customerOrder1.productName">
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" class="form-control" id="password" placeholder="Enter Quantity" [(ngModel)]="customerOrder1.productQty">
+        </div>
+        <div class="form-group">
+            <label for="address">Customer ID</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter your CustomerId" [(ngModel)]="customerOrder1.customerId">
+        </div>
+        <div class="form-group">
+            <label for="mobileno">Mobile</label>
+            <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile Number" [(ngModel)]="customerOrder1.customerMobile">
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" class="form-control" id="address" placeholder="Enter your Address" [(ngModel)]="customerOrder1.customerAddress">
+      </div>
+      
+        <button type="submit" class="btn btn-success btn-block" (click)="addOrder()">Place an Order</button>
+    
+  </div>

@@ -1,0 +1,41 @@
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <p class="navbar-brand" routerLink="/home">Home</p>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <p class="nav-link active" routerLink="/customerLogin"><button class="btn-nav">Customer</button></p>
+            
+          </li>
+          <li class="nav-item">
+            <p class="nav-link" routerLink="/dealerLogin"><button class="btn-nav">Dealer</button></p>
+          </li>
+          <li class="nav-item">
+            <p class="nav-link" routerLink="/adminLogin"><button class="btn-nav">Admin</button></p>
+          </li>
+         
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div class="container">
+    <h2 class="text-center">Dealer Login</h2>
+   <form>
+        <div class="form-group">
+            <label for="userId">User ID:</label>
+            <input type="text" class="form-control" name="userIdealer" placeholder="Enter your user ID" [(ngModel)]="dealer1.dealerId">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" name="passwordealer" placeholder="Enter your password" [(ngModel)]="dealer1.dealerPassword">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" (click)="loginDealer()">Login as a Dealer</button>
+        <br>
+        <br>
+    </form>
+        
+    
+    <button type="submit" class="btn btn-primary btn-block" routerLink="/dealerRegister">Register as a Dealer</button>
+</div>

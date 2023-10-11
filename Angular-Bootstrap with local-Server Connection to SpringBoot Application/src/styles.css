@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .btn-nav {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .btn-green {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+ 
+  
+  .container {
+    padding: 16px;
+  }
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #04AA6D;
+    color: white;;
+    color: white;
+    text-align: center;
+ }  
+
+ body {
+  background-color: #e0ffe0; /* Light green background color */
+}
+.container {
+  background-color: #ffffff; /* White container background color */
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.user-info {
+  text-align: right;
+  margin-bottom: 20px;
+}
+.user-info span {
+  font-weight: bold;
+}
+.order-history {
+  margin-top: 20px;
+}
+.order-table {
+  margin-top: 20px;
+}
+.order-table th {
+  background-color: #f0f0f0; /* Light gray header background color */
+  text-align: center;
+}
+.order-pending {
+  background-color: orange;
+}
+.order-live {
+  background-color: blue;
+}
+.order-completed {
+  background-color: green;
+}

@@ -1,0 +1,52 @@
+<p>admin-order works!</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Product Qty</th>
+            <th>Customer Mobile</th>
+            <th>Customer Address</th>
+            <th>Product Price</th>
+            <th>Order Date:</th>
+            <th>Order Status:</th>
+            <th>Action</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orderList">
+            <td>{{order.orderId}}</td>
+            <td>{{order.productId}}</td>
+            <td>{{order.productName}}</td>
+            <td>{{order.productQty}}</td>
+            <td>{{order.customerMobile}}</td>
+            <td>{{order.customerAddress}}</td>
+            <td>{{order.productPrice}}</td>
+            <td>{{order.orderDate}}</td>
+            <td>{{order.orderStatus}}</td>
+            <td>
+                <span *ngIf="order.dealerId != null && order.dealerId !=pppp">
+                    {{order.dealerId}}
+                </span>
+                <span *ngIf="order.dealerId == null || order.dealerId==pppp" >
+               
+                    <select [(ngModel)]="selectedDealerId">
+                        <option *ngFor="let dealer of dealerList" [value]="dealer.dealerId" >{{dealer.dealerId}}
+                        
+                        </option>
+                      </select>
+                      
+                    
+                </span>
+                <button (click)="assignOrder(order.orderId)">Assign to Dealer </button>
+                
+            </td>
+        </tr>
+       
+        
+    </tbody>
+</table>s
+

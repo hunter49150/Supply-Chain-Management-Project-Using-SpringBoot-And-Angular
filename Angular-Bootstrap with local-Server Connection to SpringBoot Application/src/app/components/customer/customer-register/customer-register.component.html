@@ -1,0 +1,50 @@
+<!--<div class="container form-horizontal" role="form">
+  <div class="form-group">
+    <label for="name" class="col-sm-2">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" placeholder="Name"
+      name="name" [(ngModel)]="customer.nm">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label for="name" class="col-sm-2">Email</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" placeholder="Email" [(ngModel)]="customer.ema">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button class="btn btn-success" (click)="addCustomer()">Add Order</button>
+    </div>
+  </div>
+
+</div>-->
+<div class="container">
+  <h2 class="text-center">Customer Registration</h2>
+    
+      <div class="form-group">
+          <label for="fullName">Full Name:</label>
+          <input type="text" class="form-control" id="fullName" placeholder="Enter your full name"  name="fullName"  [(ngModel)]="customer1.customerName">
+      </div>
+      <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email address" name="email"  [(ngModel)]="customer1.customerEmail" >
+      </div>
+      <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter your password" name="password"  [(ngModel)]="customer1.customerPassword" >
+      </div>
+      <div class="form-group">
+          <label for="mobileno">Mobile</label>
+          <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile Number"  name="mobile"  [(ngModel)]="customer1.customerMobile">
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" placeholder="Enter your Address"   name="address" [(ngModel)]="customer1.customerAddress">
+    </div>
+      <button type="submit" class="btn btn-success btn-block" (click)="addCustomer()">Register</button>
+    
+</div>
